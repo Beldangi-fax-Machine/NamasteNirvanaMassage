@@ -1,74 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Namaste Nirvana Massage - Experience tranquility and rejuvenation">
-    <title>Namaste Nirvana Massage</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script defer src="main.dart.js"></script>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Namaste Nirvana Massage - Premium Wellness & Spa Booking">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Namaste Nirvana">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Namaste Nirvana Massage</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = null;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
-    <header id="header">
-        <nav class="navbar">
-            <div class="logo">
-                <h1>Namaste Nirvana</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Welcome to Namaste Nirvana Massage</h2>
-                <p>Experience tranquility and rejuvenation</p>
-                <button id="book-now-btn" class="cta-button">Book Now</button>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <div id="services-container" class="services-grid">
-                <!-- Services will be populated by Dart -->
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <p>At Namaste Nirvana Massage, we believe in the healing power of touch.
-                Our skilled therapists combine ancient techniques with modern wellness practices
-                to provide you with an unforgettable relaxation experience.</p>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-                <form id="contact-form">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <p>Phone: (555) 123-4567</p>
-                    <p>Email: info@namastenirvana.com</p>
-                    <p>Address: 123 Serenity Lane, Peaceful City</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Namaste Nirvana Massage. All rights reserved.</p>
-    </footer>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
