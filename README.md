@@ -1,8 +1,21 @@
 # Namaste Nirvana Massage
 
-A web application for Namaste Nirvana Massage services built with Dart.
+Website and web application for Namaste Nirvana — a massage therapy studio
+opening on Longwood Drive in South Burlington, Vermont, founded by
+Nikesh Pokhrel.
 
-## Getting Started
+## Website (GitHub Pages)
+
+The live marketing site is a single-page static site in [`docs/`](docs/),
+deployed automatically to GitHub Pages by the workflow in
+`.github/workflows/deploy-pages.yml` on every push to `main` that touches
+`docs/`.
+
+To edit the site, change `docs/index.html` and push to `main`.
+
+## Legacy Dart web app
+
+An earlier Dart-based web application lives in `lib/` and `web/`.
 
 ### Prerequisites
 
@@ -23,12 +36,16 @@ dart run build_runner build --release
 ## Project Structure
 
 ```
+├── docs/
+│   └── index.html        # Static marketing site (GitHub Pages)
+├── .github/workflows/
+│   └── deploy-pages.yml  # Pages deployment workflow
 ├── lib/
-│   └── app.dart          # Main application logic
+│   └── app.dart          # Main application logic (legacy Dart app)
 ├── web/
-│   ├── index.html        # HTML entry point
-│   ├── main.dart         # Dart entry point
-│   └── styles.css        # Stylesheet
+│   ├── index.html        # HTML entry point (legacy Dart app)
+│   ├── main.dart         # Dart entry point (legacy Dart app)
+│   └── styles.css        # Stylesheet (legacy Dart app)
 ├── pubspec.yaml          # Project dependencies
 └── analysis_options.yaml # Dart analyzer configuration
 ```
