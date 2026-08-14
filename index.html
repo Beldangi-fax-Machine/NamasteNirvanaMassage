@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namaste Nirvana — Massage Therapy in South Burlington, VT</title>
+<meta name="description" content="Namaste Nirvana is a massage therapy studio on Longwood Drive in South Burlington, Vermont. Founded by Nikesh Pokhrel, we help release the stress your body has been carrying.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #23262c;
+    --ink-soft: #4b5058;
+    --paper: #fdfbf6;
+    --stone: #f4eee2;
+    --stone-deep: #e9e0cd;
+    --pine: #2e4b3f;
+    --pine-deep: #22392f;
+    --marigold: #dd9a2b;
+    --clay: #c24c3c;
+    --flag-blue: #3e6fa8;
+    --flag-white: #f7f4ec;
+    --flag-red: #c24c3c;
+    --flag-green: #3f7a54;
+    --flag-yellow: #e5b13a;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Karla", -apple-system, "Segoe UI", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  .flag-thread { display: flex; height: 5px; width: 100%; }
+  .flag-thread span { flex: 1; }
+  .flag-thread span:nth-child(1) { background: var(--flag-blue); }
+  .flag-thread span:nth-child(2) { background: var(--flag-white); }
+  .flag-thread span:nth-child(3) { background: var(--flag-red); }
+  .flag-thread span:nth-child(4) { background: var(--flag-green); }
+  .flag-thread span:nth-child(5) { background: var(--flag-yellow); }
+
+  .announce {
+    background: var(--pine-deep); color: var(--flag-white);
+    text-align: center; font-size: 0.85rem; letter-spacing: 0.03em;
+    padding: 10px 16px; font-weight: 600;
+  }
+  .announce em { font-style: normal; color: var(--marigold); }
+
+  header { padding: 28px 0; }
+  .brand { display: flex; align-items: baseline; justify-content: center; gap: 10px; text-decoration: none; }
+  .brand-name {
+    font-family: var(--serif); font-weight: 600; font-size: 1.5rem;
+    color: var(--pine-deep); letter-spacing: 0.01em;
+  }
+  .brand-devanagari { font-size: 1rem; color: var(--marigold); font-weight: 400; }
+
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 700;
+    font-family: var(--sans); font-size: 0.95rem; letter-spacing: 0.02em;
+    padding: 13px 28px; border-radius: 999px; border: 2px solid transparent;
+  }
+  .btn-marigold { background: var(--marigold); color: var(--pine-deep); }
+  .btn-outline { border-color: var(--pine); color: var(--pine); background: transparent; }
+
+  main { padding: 8px 0 0; }
+  section { padding: 56px 0; border-top: 1px solid var(--stone-deep); }
+  section:first-of-type { border-top: none; }
+
+  .hero { text-align: center; padding-top: 40px; }
+  .hero-kicker {
+    font-weight: 700; font-size: 0.8rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--clay); margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 6vw, 2.9rem);
+    line-height: 1.15; color: var(--ink); letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--pine); }
+  .hero p.lede {
+    margin: 20px auto 0; font-size: 1.08rem; color: var(--ink-soft); max-width: 34em;
+  }
+  .hero-ctas { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  h2.section-title {
+    font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem, 3.4vw, 2rem);
+    line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 18px;
+  }
+  .about p { color: var(--ink-soft); font-size: 1.02rem; margin-bottom: 1em; }
+  .about p:last-child { margin-bottom: 0; }
+  .about strong { color: var(--ink); }
+
+  .services-list { display: grid; gap: 18px; margin-top: 6px; }
+  .s-row {
+    border: 1px solid var(--stone-deep); border-radius: 14px; padding: 20px 22px;
+    background: var(--stone); display: flex; justify-content: space-between;
+    align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }
+  .s-row h3 { font-family: var(--serif); font-weight: 600; font-size: 1.1rem; }
+  .s-row .s-meta { font-size: 0.9rem; color: var(--ink-soft); }
+  .pricing-note { margin-top: 20px; font-size: 0.9rem; color: var(--ink-soft); }
+
+  .visit-card dl { display: grid; gap: 18px; margin-top: 4px; }
+  .visit-card dt {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--clay); margin-bottom: 3px;
+  }
+  .visit-card dd { font-size: 1.05rem; color: var(--ink); }
+  .visit-card dd .muted { color: var(--ink-soft); font-size: 0.92rem; }
+
+  footer { background: var(--pine-deep); color: #cfd9d0; text-align: center; padding: 34px 24px; }
+  footer .brand-name { color: var(--flag-white); }
+  footer p { margin-top: 8px; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<div class="announce">Now opening on Longwood Drive, South Burlington, Vermont — <em>booking begins soon</em></div>
+
+<header>
+  <a class="brand" href="#top">
+    <span class="brand-name">Namaste Nirvana</span>
+    <span class="brand-devanagari">नमस्ते</span>
+  </a>
+</header>
+
+<div class="flag-thread" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+
+<main id="top">
+
+  <div class="wrap">
+
+    <section class="hero">
+      <p class="hero-kicker">Massage Therapy · South Burlington, VT</p>
+      <h1>Your body has been carrying it. <em>Let it go here.</em></h1>
+      <p class="lede">
+        Namaste Nirvana is a massage therapy studio built on a simple truth:
+        stress doesn't just live in the mind — it settles into muscle, breath,
+        and posture. We help you release it, one session at a time.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-marigold" href="#visit">Booking opens soon</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <p>
+        Founded by <strong>Nikesh Pokhrel</strong>, Namaste Nirvana is opening on
+        Longwood Drive in South Burlington, Vermont. Nikesh grew up in the Beldangi
+        refugee camp in eastern Nepal, where he watched hard labor and years of
+        stress wear down his parents' bodies — and it set him on a path to become a
+        massage therapist.
+      </p>
+      <p>
+        Every session treats the mind and muscles as connected: pressure is adjusted
+        to you, the pace is unhurried, and the goal is always the same — helping
+        your body put down what it's been holding.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Services</h2>
+      <div class="services-list">
+        <div class="s-row">
+          <h3>The Nirvana Release (Signature)</h3>
+          <span class="s-meta">60 / 90 min</span>
+        </div>
+        <div class="s-row">
+          <h3>Relaxation Massage · Swedish</h3>
+          <span class="s-meta">60 / 90 min</span>
+        </div>
+        <div class="s-row">
+          <h3>Deep Tissue</h3>
+          <span class="s-meta">60 / 90 min</span>
+        </div>
+        <div class="s-row">
+          <h3>Targeted Relief · Neck, shoulders &amp; back</h3>
+          <span class="s-meta">30 min</span>
+        </div>
+      </div>
+      <p class="pricing-note">Opening rates and full menu will be posted when booking opens.</p>
+    </section>
+
+    <section id="visit" class="visit-card">
+      <h2 class="section-title">Visit</h2>
+      <dl>
+        <div>
+          <dt>Location</dt>
+          <dd>Longwood Drive, South Burlington, Vermont</dd>
+        </div>
+        <div>
+          <dt>Hours</dt>
+          <dd><span class="muted">Posted when we open — flexible early/evening appointments planned</span></dd>
+        </div>
+        <div>
+          <dt>Booking</dt>
+          <dd><span class="muted">Online booking and phone line coming soon</span></dd>
+        </div>
+      </dl>
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+  <span class="brand-name">Namaste Nirvana <span class="brand-devanagari">नमस्ते</span></span>
+  <p>© 2026 Namaste Nirvana · Longwood Drive, South Burlington, VT</p>
+</footer>
+
+</body>
+</html>
