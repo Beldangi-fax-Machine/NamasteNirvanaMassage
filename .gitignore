@@ -18,3 +18,8 @@ Thumbs.db
 *.dart.js.map
 *.js.deps
 *.js.map
+
+# Xcode
+ios/**/xcuserdata/
+ios/**/*.xcuserstate
+ios/**/DerivedData/
